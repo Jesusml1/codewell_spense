@@ -1,0 +1,99 @@
+.sideheader {
+  background-color: black;
+  padding: 0.5rem 1.5rem;
+  p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.7;
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.25rem 1rem;
+  background-color: $weiss;
+  &__logo {
+    a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__links,
+  &__auth {
+    display: none;
+  }
+
+  &__burger {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  // medium size
+  @include md {
+    display: grid;
+    @include md-padding;
+    grid-template-columns: auto 1fr auto auto;
+    &__logo {
+      grid-column: 1/2;
+    }
+    &__links {
+      grid-column: 3/4;
+      display: flex;
+      margin-right: 2rem;
+      li {
+        list-style: none;
+        margin-left: 2rem;
+        font-weight: 500;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+    &__auth {
+      grid-column: 5/6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .login {
+        color: black;
+        padding: 1.5rem 1rem;
+      }
+      .register {
+        color: white;
+        background-color: black;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+    }
+
+    &__burger {
+      display: none;
+    }
+  }
+
+  // large size
+  @include lg {
+    display: flex;
+    justify-content: space-between;
+    @include lg-padding;
+  }
+}

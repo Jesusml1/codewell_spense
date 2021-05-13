@@ -1,1 +1,6 @@
-@import "./normalize";
+@import "./normalize", "./mixins", "./variables";
+@import "./header";
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
