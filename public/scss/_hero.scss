@@ -1,0 +1,95 @@
+.hero {
+  background-color: $weiss;
+  padding: 1rem;
+  color: $blackMatt;
+
+  &__image {
+    width: 100%;
+    height: 435px;
+    img {
+      width: 100%;
+      height: 445px;
+      border-radius: 1rem;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  h1 {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+  }
+  p {
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+  &__text-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      img {
+        width: 20px;
+        margin: 0.5rem 1rem;
+        margin-left: 0;
+      }
+    }
+  }
+
+  form {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    input,
+    button {
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    input {
+      border: 1px solid #bbbbb9;
+    }
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      font-weight: 500;
+      margin-left: 0.8rem;
+      cursor: pointer;
+    }
+  }
+
+  @include md {
+    @include md-padding;
+
+    &__image {
+      height: 85vh;
+      img {
+        max-width: 100%;
+        height: 550px;
+        object-fit: fill;
+      }
+    }
+  }
+
+  @include lg {
+    @include lg-padding;
+    display: flex;
+    flex-direction: row-reverse;
+    &__image {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        max-width: 35vw;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
