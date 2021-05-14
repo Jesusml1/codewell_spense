@@ -1,0 +1,35 @@
+.logos {
+  display: flex;
+  padding: 2rem 1rem;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-height: 2rem;
+    margin-left: 1rem;
+  }
+
+  &__youtube,
+  &__pinterest,
+  &__twitter,
+  &__reddit,
+  &__google,
+  &__slack {
+    display: none;
+  }
+
+  @include md {
+    &__youtube,
+    &__pinterest {
+      display: block;
+    }
+  }
+
+  @include lg {
+    &__twitter,
+    &__reddit,
+    &__google {
+      display: block;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 @import "./normalize", "./mixins", "./variables";
-@import "./header", "./hero";
+@import "./header", "./hero", "./logos";
+@import "./card";
 
 :root {
   font-family: "Roboto", sans-serif;
