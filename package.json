@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "~/.yarn/bin/parcel public/index.html"
+    "dev": "~/.yarn/bin/parcel public/index.html",
+    "build": ""
   },
   "keywords": [],
   "author": "",
