@@ -1,0 +1,66 @@
+.footer {
+  display: grid;
+  grid-template-areas:
+    "spense spense" "company opportunities"
+    "sitemap resources";
+  //   grid-template-columns: 1fr 1fr;
+  //   grid-template-rows: 1fr 1fr 1fr;
+  padding: 2rem 1rem;
+  background-color: black;
+  .spense {
+    grid-area: spense;
+  }
+  .company {
+    grid-area: company;
+  }
+  .opportunities {
+    grid-area: opportunities;
+  }
+  .sitemap {
+    grid-area: sitemap;
+  }
+  .resources {
+    grid-area: resources;
+  }
+
+  .spense,
+  .company,
+  .opportunities,
+  .sitemap,
+  .resources {
+    display: flex;
+    flex-direction: column;
+    p {
+      color: #9d9d9d;
+      line-height: 1.5;
+      margin-top: 0;
+    }
+    h4 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #9d9d9d;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include md {
+    @include md-padding;
+    grid-template-areas:
+      "spense spense sitemap resources"
+      "company opportunities . .";
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+  }
+
+  @include lg {
+    @include lg-padding;
+    grid-template-areas: "spense spense spense sitemap resources company opportunities";
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
