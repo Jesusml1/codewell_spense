@@ -33,6 +33,9 @@
   &__links,
   &__auth {
     display: none;
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   &__burger {

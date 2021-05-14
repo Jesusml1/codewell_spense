@@ -6,6 +6,7 @@
   position: relative;
   justify-content: center;
   background-color: $weiss;
+  margin-top: 0;
 
   &__text {
     padding: 2rem;
@@ -41,6 +42,7 @@
 
   @include md {
     margin: 2.25rem 2rem;
+    margin-top: 0;
     &__text {
       padding: 4rem 6rem;
       padding-bottom: 0;
