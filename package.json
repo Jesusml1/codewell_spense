@@ -2,15 +2,18 @@
   "name": "spense",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
+  
   "scripts": {
-    "dev": "~/.yarn/bin/parcel public/index.html",
-    "build": ""
+    "dev": "parcel public/index.html",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2",
     "sass": "^1.32.13"
   }
 }
